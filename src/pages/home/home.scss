@@ -1,3 +1,51 @@
 page-home {
+  .toolbar-background {
+    background: #1cd8d2; /* fallback for old browsers */
+    background: linear-gradient(to right, #93edc7, #1cd8d2);
+  }
+  .toolbar-title {
+    color: white;
+  }
+  .header {
+    font-size: 35px;
+    line-height: 1.1;
+  }
 
+  .options {
+    margin-top: 1.5rem;
+    padding: 0 17px 5px;
+    .option {
+      margin: 15px 0;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      opacity: 0.6;
+      font-size: 17px;
+      font-weight: bold;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+      &.active {
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-image: linear-gradient(to right, #93edc7, #1cd8d2) 1 100%;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .submit {
+    background: #1cd8d2; /* fallback for old browsers */
+    background: linear-gradient(to right, #93edc7, #1cd8d2);
+    border-radius: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-bottom: 0;
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .response{
+    @extend .submit;
+    margin-top: 5rem;
+  }
 }

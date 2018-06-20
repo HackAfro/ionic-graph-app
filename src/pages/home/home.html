@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Vote
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <div padding>
+    <h1 class="header">Who will win the world cup?</h1>
+  </div>
+  <div class="vote-area" *ngIf="!voted">
+    <div class="options">
+      <button ion-button full class="option" color="light" [ngClass]="{active: selectedOption === option}" *ngFor="let option of optionsArray"
+        (click)="selectOption(option)">{{options[option].name}}</button>
+    </div>
+    <div>
+      <button ion-button block class="submit" (click)="vote()">Submit Vote!</button>
+    </div>
+  </div>
+  <div class="result-area" *ngIf="voted">
+    <canvas baseChart [data]="chartData" [labels]="optionsArray" [chartType]="chartType"></canvas>
+    <div ion-button block class="response">Thank you for voting!</div>
+  </div>
 </ion-content>
