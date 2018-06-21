@@ -27,7 +27,7 @@ export class HomePage implements OnInit {
   voted = false;
 
   selectOption(option) {
-    this.selectedOption = option;
+    this.selectedOption = this.selectedOption !== option ? option : '';
   }
 
   computeData(option) {
