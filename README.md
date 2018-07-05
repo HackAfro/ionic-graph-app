@@ -1,6 +1,8 @@
 # Ionic-Realtime-Data-Visualization
 Realtime data visualisation using Pusher and Ionic
 
+You can find the article [here](https://pusher.com/tutorials/live-graph-ionic)
+
 ## Prerequisites
 - [Ionic](https://ionicframework.com/)
 - [Express](https://expressjs.com/)
